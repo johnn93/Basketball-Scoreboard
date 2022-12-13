@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="text"></h1>
+            <div class="scoreboard">
+                <div class="team-container home">
+                    <h2 class="text">Home</h2>
+                    <div class="one">
+                        <p class="pts" id="home-pts">0</p>
+                        <p class="pts-shadow">000</p>
+                    </div>
+                </div>
+                <div class="team-container guest">
+                    <h2 class="text">GUEST</h2>
+                    <div class="one">
+                        <p class="pts" id="guest-pts">0</p>
+                        <p class="pts-shadow">000</p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="two-home">
+            <button class="points" id="one-pt" onclick="homeAddPoint()">+1</button>
+            <div class="divider"></div>
+            <button class="points" id="two-pts" onclick="homeAddTwoPoints()">+2</button>
+            <div class="divider"></div>
+            <button class="points" id="three-pts" onclick="homeAddThreePoints()">+3</button>
+            <div class="divider"></div>
+            <button class="points" id="one-pt" onclick="homeMinusPoint()">-1</button>
+            <div class="divider"></div>
+            <button class="points" id="two-pts" onclick="homeMinusTwoPoints()">-2</button>
+            <div class="divider"></div>
+            <button class="points" id="three-pts" onclick="homeMinusThreePoints()">-3</button>
+        </div>
+        <div class="two-guest">
+            <button class="points" id="one-pt" onclick="guestAddPoint()">+1</button>
+            <div class="divider"></div>
+            <button class="points" id="two-pts" onclick="guestAddTwoPoints()">+2</button>
+            <div class="divider"></div>
+            <button class="points" id="three-pts" onclick="guestAddThreePoints()">+3</button>
+            <div class="divider"></div>
+            <button class="points" id="one-pt" onclick="guestMinusPoint()">-1</button>
+            <div class="divider"></div>
+            <button class="points" id="two-pts" onclick="guestMinusTwoPoints()">-2</button>
+            <div class="divider"></div>
+            <button class="points" id="three-pts" onclick="guestMinusThreePoints()">-3</button>
+        </div>
+            <div class="timer">
+                <span class="minute" id="timer">10:00</span>
+            </div>
+            <div class="control">
+                <button id="start" onClick="startStop()">Start/Stop</button> 
+                <!--<button id="stop" onClick="stoptime()">Stop</button>--> 
+                <button id="reset" onClick="resetTime()">Reset</button>
+            </div>
+            <button onclick="nextQuarter()" id="quarterNow" class="quarter">1</button>
+            <a href="./scoreboard.html" target="_blank">Open Scoreboard</a>
+            <script src="./script.js"></script>
+    </body>
+ </html>

@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Digital Display';
+    src: url('https://praxeds.github.io/scrimba-basketball-scoreboard/Assets/Digital-Display.woff2') format('woff2'),
+        url('https://praxeds.github.io/basketball-scoreboard/Assets/Digital-Display.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*
+
+!Variables
+
+*/
+
+:root{
+    --background-color: rgb(5, 5, 5);
+    --background-color1: rgb(5, 5, 5);
+    --text-color1: red; 
+    --text-color2: red; 
+}
+
+body{
+    margin:0;
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index:1;
+    display: flex;
+    flex-direction: column;
+    
+    align-items:center;
+    justify-content: space-between;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+ .control{
+    position:absolute;
+    top:80%;
+    left:35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+}
+
+.text {
+    text-transform: uppercase;
+    color: var(--text-color2);
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: var(--background-color1);
+    outline: 10px solid var(--background-color1);
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index:1;
+
+}
+
+.home{
+    position:absolute;
+    top: 50%;
+    left:2%;
+    font-size: 20px;
+}
+
+.guest{
+    position:absolute;
+    top: 50%;
+    right:2%;
+    font-size: 20px;
+}
+
+.timer{
+    position:absolute;
+    z-index: 2;
+    color:red;
+    top:-5%;
+    left:15%;
+    font-size: 300px;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.one {
+    position: relative;
+    width: 18em;
+    height: 10em;
+
+    margin-bottom: 30px;
+    background-color: #0c0c0c ;
+}
+
+.pts-shadow {
+    font-family: 'Digital Display',monospace;
+    font-size: 11em;
+    text-align: center;
+
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 52.5%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    color: black;
+}
+
+.pts {
+    font-family: 'Digital Display',monospace;
+    font-size: 12em;
+    text-align: end;
+
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0;
+    margin-right: 37.2px;
+    color: var(--text-color1);
+}
+
+.two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    width: 18em;
+}
+
+.two-home{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    top:90%;
+    left: 7%;
+    width: 15px; 
+    font-size: 7px;
+    z-index: 2;
+
+}
+
+.two-guest{
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    top:90%;
+    right: 23%;
+    width: 15px; 
+    font-size: 7px;
+    z-index: 2;
+}
+
+.points {
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    font-size: 2em;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: var(--text-color2);
+    background-color: transparent;
+}
+
+#start{
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    font-size: 2em;
+    border: 3px solid red;
+    border-radius: 10px;
+    color: var(--text-color2);
+    background-color: transparent;
+}
+
+#reset{
+    cursor: pointer;
+    width: 200px;
+    height: 40px;
+    font-size: 2em;
+    border: 3px solid red;
+    border-radius: 10px;
+    color: var(--text-color2);
+    background-color: transparent;
+}
+
+.points:hover {
+    background-color: black;
+}
+
+a {
+    position: absolute;
+    z-index: 2;
+    top:90%;
+    left:50%;
+    color: red;
+}
+
+#timerNum{
+    color: #7ca1dd;
+    font-size: 220px;
+    padding-top :0px;
+    padding-bottom: 0px;
+  }
+
+  .divider{
+    margin: 5px;
+  }
+
+  .quarter{
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    color: red;
+    z-index: 2;
+    font-size: 150px;
+    font-weight: normal;
+    cursor: pointer;
+    border: none;
+    background-color: var(--background-color);;
+  }
+
+  
